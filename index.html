@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Space shooter</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			body {
+				display: flex;
+				justify-content: center;
+				background-color: #333;
+			}
+			#playbtn {
+				width: 100px;
+				height: 32px;
+				position: absolute;
+				top: 45%;
+			}
+			#scorediv {
+				position: absolute;
+				left: 25%;
+				top: 1%;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="c"> </canvas>
+		<button id="playbtn">Play</button>
+		<div id="scorediv">Score: <span id="score"></span></div>
+	</body>
+	<script type="module" src="/src/script.js"></script>
+</html>
