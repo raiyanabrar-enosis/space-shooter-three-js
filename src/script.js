@@ -68,7 +68,8 @@ function initializeGame() {
 
 function spawnEnemies() {
 	setInterval(() => {
-		const enemy = new Enemy(scene);
+		const enemyType = Math.round(Math.random() * 2);
+		const enemy = new Enemy(scene, enemyType);
 		enemies.push(enemy);
 	}, enemySpawnInterval);
 }
@@ -98,7 +99,7 @@ function gameHandlers() {
 	for (let j = 0; j < enemies.length; j++) {
 		enemies[j].move();
 		if (enemies[j].isGameOver(scene)) {
-			alert("GameOver!! Score: ", score);
+			alert("GameOver!! Score: " + score);
 			init();
 			play();
 		}
